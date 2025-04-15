@@ -188,8 +188,8 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_YELLOW_TREE_0EF1BB203 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "/frontend/"
-          api_location: "/api" # Now points to our prepared api directory
+          app_location: "frontend"
+          api_location: "api" # Now points to our prepared api directory
           output_location: "build"
         env:
           MONGO_URI: ${{ secrets.MONGO_URI }}
