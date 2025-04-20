@@ -7,14 +7,16 @@ const RoleSelection = () => {
 
     const selectRole = async (role) => {
         try {
-            const res = await fetch("http://localhost:5000/users/set-role", {
+            const res = await fetch(`${process.env.REACT_APP_API_URL}/users/set-role`, {
                 method: "POST",
-                credentials: "include", // to include session cookie
+                credentials: "include",
                 headers: {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({ role }),
             });
+            
+            
 
             if (res.ok) {
                 // Navigate to correct dashboard
